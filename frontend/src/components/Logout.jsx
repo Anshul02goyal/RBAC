@@ -10,7 +10,7 @@ const Logout = () => {
         const handleLogout = async () => {
             try {
                 const token = localStorage.getItem('token');
-                const response = await axios.post("http://localhost:5000/auth/logout", {}, 
+                const response = await axios.post("https://rbac-backend-zg63.onrender.com/auth/logout", {}, 
                 {
                     headers: { Authorization: `Bearer ${token}` }
                 });
