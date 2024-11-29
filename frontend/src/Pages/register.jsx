@@ -20,7 +20,7 @@ const Register = () => {
     }
     setLoading(true);
     try {
-      await axios.post("http://localhost:5000/auth/register", {
+      await axios.post("https://rbac-backend-zg63.onrender.com/auth/register", {
         username,
         email,
         password,
