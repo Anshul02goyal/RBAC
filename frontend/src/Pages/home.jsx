@@ -23,7 +23,7 @@ const HomePage = () => {
           return navigate("/"); // Redirect to login if no token is found
         }
 
-        const response = await axios.get("http://localhost:5000/auth/me", {
+        const response = await axios.get("https://rbac-backend-zg63.onrender.com/auth/me", {
           headers: { Authorization: `Bearer ${token}` },
         });
 
@@ -47,7 +47,7 @@ const HomePage = () => {
     const fetchContent = async () => {
       try {
         const token = localStorage.getItem("token");
-        const response = await axios.get("http://localhost:5000/content/", {
+        const response = await axios.get("https://rbac-backend-zg63.onrender.com/content/", {
           headers: { Authorization: `Bearer ${token}` },
         });
         setContent(response.data);
@@ -69,7 +69,7 @@ const HomePage = () => {
     try {
       const token = localStorage.getItem("token");
       const response = await axios.post(
-        "http://localhost:5000/content/create",
+        "https://rbac-backend-zg63.onrender.com/content/create",
         { text: text },
         {
           headers: { Authorization: `Bearer ${token}` },
@@ -88,7 +88,7 @@ const HomePage = () => {
     try {
       const token = localStorage.getItem("token");
       const response = await axios.delete(
-        `http://localhost:5000/content/delete/${id}`,
+        `https://rbac-backend-zg63.onrender.com/content/delete/${id}`,
         {
           headers: { Authorization: `Bearer ${token}` },
         }
@@ -111,7 +111,7 @@ const HomePage = () => {
     try {
       const token = localStorage.getItem("token");
       const response = await axios.put(
-        "http://localhost:5000/content/update",
+        "https://rbac-backend-zg63.onrender.com/content/update",
         {
           contentId: id,
           content: editingText,
