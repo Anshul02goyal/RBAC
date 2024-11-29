@@ -3,6 +3,15 @@
 This is a **Role-Based Access Control (RBAC)** application built using the **MERN stack** (MongoDB, Express, React, Node.js). The app allows users with different roles (**Admin, Moderator, User**) to access different parts of the system based on their permissions. Users can register, log in, and view their profiles, with additional features for **Admins** and **Moderators**.
 
 ---
+## Sample ID
+### 1. **Admin**
+ - Email Id - admin1@admin.com
+ - Password - admin
+
+### 2. **Moderator**
+ - Email Id - mod1@mod.com
+ - Password - mod1
+---
 
 ## Features
 
