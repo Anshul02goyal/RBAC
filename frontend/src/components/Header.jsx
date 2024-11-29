@@ -19,7 +19,7 @@ const Header = () => {
           return navigate("/"); // Redirect to login if no token is found
         }
 
-        const response = await axios.get("http://localhost:5000/auth/me", {
+        const response = await axios.get("https://rbac-backend-zg63.onrender.com/auth/me", {
           headers: { Authorization: `Bearer ${token}` },
         });
 
