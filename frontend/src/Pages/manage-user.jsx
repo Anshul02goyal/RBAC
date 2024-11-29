@@ -13,7 +13,7 @@ const ManageUsers = () => {
     const fetchUsers = async () => {
       try {
         const token = localStorage.getItem("token");
-        const response = await axios.get("http://localhost:5000/auth", {
+        const response = await axios.get("https://rbac-backend-zg63.onrender.com/auth", {
           headers: { Authorization: `Bearer ${token}` },
         });
         if (response.status === 200) {
@@ -38,7 +38,7 @@ const ManageUsers = () => {
     try {
       const token = localStorage.getItem("token");
       const response = await axios.put(
-        "http://localhost:5000/auth/role",
+        "https://rbac-backend-zg63.onrender.com/auth/role",
         { userId, role: newRole },
         {
           headers: { Authorization: `Bearer ${token}` },
@@ -64,7 +64,7 @@ const ManageUsers = () => {
     try {
       const token = localStorage.getItem("token");
       const response = await axios.delete(
-        `http://localhost:5000/auth/${userId}`,
+        `https://rbac-backend-zg63.onrender.com/auth/${userId}`,
         {
           headers: { Authorization: `Bearer ${token}` },
         }
